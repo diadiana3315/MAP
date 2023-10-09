@@ -56,5 +56,18 @@ public class Main {
         }
         System.out.print("]");
 
+        int[] arr3 = {8,3,0,0,0};
+        int[] arr4 = {5,4,0,0,0};
+
+        int[] resultDiff = nr.differenz(arr3, arr4);
+        System.out.print("[");
+        for(int i = 0; i < resultDiff.length; i++){
+            System.out.print(resultDiff[i]);
+            if(i < resultDiff.length - 1){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+
     }
 }

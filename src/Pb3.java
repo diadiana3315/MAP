@@ -14,4 +14,21 @@ public class Pb3 {
           return sum;
      }
 
+     public int[] differenz(int[] arr1, int[] arr2){
+          int[] diff = new int[arr1.length];
+          int borrow = 0;
+
+          for(int i = arr1.length - 1; i >= 0; i--){
+               int digitDiff = arr1[i] - arr2[i] - borrow;
+               if(digitDiff < 0){
+                    digitDiff += 10;
+                    borrow = 1;
+               }
+               else{
+                    borrow = 0;
+               }
+               diff[i] = digitDiff;
+          }
+          return diff;
+     }
 }
