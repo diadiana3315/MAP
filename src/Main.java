@@ -6,28 +6,27 @@ public class Main {
         int[] notenListe = {54, 31, 63, 73, 98, 92, 70, 65, 23, 34};
         int[] noten = {5, 6, 10};
 
-        NichtAusreichend note = new NichtAusreichend();
-        int[] resultArray = note.nichtAusreichend();
+        Pb1 note = new Pb1();
+        int[] resultArray = note.nichtAusreichend(notenListe);
 
-        for (int i = 0; i < note.newList.length; i++) {
-            if (resultArray[i] != 0)
-                System.out.println(resultArray[i]);
+        for (int j : resultArray) {
+            if (j != 0)
+                System.out.println(j);
         }
 
-        Durchschnittswert durchschnitt = new Durchschnittswert();
-        System.out.println(durchschnitt.durchschnitt(noten));
+        System.out.println(note.durchschnitt(noten));
 
 
-        Abgerundet abgerundet = new Abgerundet();
-        int[] roundedGrades = abgerundet.abgerundet(notenListe);
+
+        int[] roundedGrades = note.abgerundet(notenListe);
 
         // Print the rounded grades
         System.out.print("Rounded Grades: ");
-        for (int i = 0; i < roundedGrades.length; i++) {
-            System.out.print(roundedGrades[i] + " ");
+        for (int roundedGrade : roundedGrades) {
+            System.out.print(roundedGrade + " ");
         }
 
-        int maxAbgerundeteNote = abgerundet.maxAbgerundet(notenListe);
+        int maxAbgerundeteNote = note.maxAbgerundet(notenListe);
 
         if (maxAbgerundeteNote >= 38) {
             System.out.println("Maximale abgerundete Note: " + maxAbgerundeteNote);

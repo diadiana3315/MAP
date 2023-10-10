@@ -1,4 +1,24 @@
-public class Abgerundet {
+public class Pb1 {
+    public int[] nichtAusreichend(int[] notenListe){
+        int[] newList = new int[notenListe.length];
+        int j = 0;
+
+        for (int k : notenListe) {
+            if (k < 40) {
+                newList[j] = k;
+                j++;
+            }
+        }
+        return newList;
+    }
+
+    public int durchschnitt(int[] notenListe){
+        int sum = 0;
+        for (int j : notenListe) {
+            sum = sum + j;
+        }
+        return sum/notenListe.length;
+    }
 
     public int[] abgerundet(int[] notenListe) {
         for (int i = 0; i < notenListe.length; i++) {
@@ -22,23 +42,18 @@ public class Abgerundet {
                 int remainder = j % 5;
                 int abgerundeteNote;
                 if (remainder < 3) {
-                    // Kein Runden erforderlich
                     abgerundeteNote = j;
                 } else {
-                    // Auf die nächste multiple von 5 aufrunden
                     abgerundeteNote = j + (5 - remainder);
                 }
 
-                // Maximale abgerundete Note aktualisieren, falls größer als die bisherige maximale Note
                 if (abgerundeteNote > maxAbgerundeteNote) {
                     maxAbgerundeteNote = abgerundeteNote;
                 }
             }
-            // Für Noten kleiner als 38 ist kein Runden erforderlich
+
         }
 
-        // Wenn alle Noten kleiner als 38 sind, wird Integer.MIN_VALUE zurückgegeben
         return maxAbgerundeteNote;
     }
-
 }
