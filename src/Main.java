@@ -69,5 +69,31 @@ public class Main {
         }
         System.out.print("]");
 
+        int[] arr5 = {2,3,6,0,0};
+
+        int[] resultMul = nr.multiplikation(arr5, 2);
+
+        System.out.print("[");
+        for(int i = 0; i < resultMul.length; i++){
+            System.out.print(resultMul[i]);
+            if(i < resultMul.length - 1){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+
+        int[] arr6 = {2,3,6,0,0};
+
+        int[] resultDiv = nr.division(arr6, 2);
+
+        System.out.print("[");
+        for(int i = 0; i < resultDiv.length; i++){
+            System.out.print(resultDiv[i]);
+            if(i < resultDiv.length - 1){
+                System.out.print(", ");
+            }
+        }
+        System.out.print("]");
+
     }
 }

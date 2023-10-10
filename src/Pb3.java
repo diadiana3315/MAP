@@ -31,4 +31,32 @@ public class Pb3 {
           }
           return diff;
      }
+
+     public int[] multiplikation(int[] arr, int nr){
+          int[] newArr = new int[arr.length + 1];
+          int carry = 0;
+          for(int i = arr.length - 1; i >= 0; i--){
+               int digits = arr[i] * nr + carry;
+               newArr[i+1] = digits % 10;
+               carry = digits / 10;
+
+          }
+          return newArr;
+     }
+
+     public int[] division(int[] arr, int nr){
+          int[] newArr = new int[arr.length + 1];
+          int borrow = 0;
+
+          // Ganzzahlige Division des Arrays durch den Divisor
+          for (int i = 0; i < arr.length; i++) {
+               int quotient = arr[i] / nr;
+               int remainder = arr[i] % nr;
+               arr[i] = quotient;
+               if (i + 1 < arr.length) {
+                    arr[i + 1] += remainder * 10;
+               }
+          }
+          return arr;
+     }
 }
