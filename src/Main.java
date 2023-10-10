@@ -44,6 +44,7 @@ public class Main {
 
         int[] arr1 = {5, 4, 0, 0, 0};
         int[] arr2 = {8, 7, 0, 0, 0};
+
         Pb3 nr = new Pb3();
         int[] result = nr.summe(arr1, arr2);
 
@@ -94,6 +95,17 @@ public class Main {
             }
         }
         System.out.print("]");
+
+        System.out.println();
+
+        Pb4 object = new Pb4();
+        int[] arr7 = {40, 35, 70, 15, 45};
+        int[] arr8 = {8,12};
+        int[] arr9 = {20, 15, 40, 15};
+        System.out.println(object.billigste(arr7));
+        System.out.println(object.teursteGegenstand(arr7, arr9));
+        System.out.println(object.teuersteUSB(arr7, 30));
+        System.out.println(object.geldbetrag(arr7, arr8, 60));
 
     }
 }
