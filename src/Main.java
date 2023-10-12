@@ -20,7 +20,6 @@ public class Main {
 
         int[] roundedGrades = note.abgerundet(notenListe);
 
-        // Print the rounded grades
         System.out.print("Rounded Grades: ");
         for (int roundedGrade : roundedGrades) {
             System.out.print(roundedGrade + " ");
