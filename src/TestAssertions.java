@@ -7,6 +7,7 @@ public class TestAssertions {
     public Pb1 pb1 = new Pb1();
     public Pb2 pb2 = new Pb2();
     public Pb3 pb3 = new Pb3();
+    public Pb4 pb4 = new Pb4();
 
     @Test
     public void testNichtAusreichend(){
@@ -118,14 +119,58 @@ public class TestAssertions {
         assertArrayEquals(expected, result);
     }
 
-//    @Test
-//    public void testDivision(){
-//        int[] arr1 = {5, 4, 0, 0, 0};
-//        int[] arr2 = {8, 7, 0, 0, 0};
-//
-//        int [] expected = {1, 1, 8, 0, 0};
-//        int [] result = pb3.summe(arr1, arr2);
-//
-//        assertArrayEquals(expected, result);
-//    }
+    @Test
+    public void testDivision(){
+        int[] arr1 = {2,3,6,0,0};
+        int nr = 2;
+
+        int [] expected = {1, 1, 8, 0, 0};
+        int [] result = pb3.division(arr1, nr);
+
+        assertArrayEquals(expected, result);
+    }
+
+    @Test
+    public void testBilligste(){
+        int[] arr1 = {40, 35, 70, 15, 45};
+
+        int expected = 15;
+        int result = pb4.billigste(arr1);
+        assertEquals(expected, result);
+
+    }
+
+    @Test
+    public void testTeuersteGegenstand(){
+        int[] arr1 = {40, 35, 70, 15, 45};
+        int[] arr2 = {20, 15, 40, 15};
+
+        int expected = 70;
+        int result = pb4.teursteGegenstand(arr1, arr2);
+        assertEquals(expected, result);
+
+    }
+    @Test
+    public void testTeuersteUSB(){
+        int[] arr1 = {40, 35, 70, 15, 45};
+        int budget = 30;
+
+        int expected = 15;
+        int result = pb4.teuersteUSB(arr1, budget);
+        assertEquals(expected, result);
+
+    }
+    @Test
+    public void testGeldbetrag(){
+        int[] arr1 = {40, 35, 70, 15, 45};
+        int[] arr2 = {8,12};
+        int budget = 60;
+
+        int expected = 57;
+        int result = pb4.geldbetrag(arr1, arr2, budget);
+        assertEquals(expected, result);
+
+    }
+
+
 }
