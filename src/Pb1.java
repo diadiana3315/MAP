@@ -9,7 +9,12 @@ public class Pb1 {
                 j++;
             }
         }
-        return newList;
+        int[] resultList = new int[j];
+
+        for (int i = 0; i < j; i++) {
+            resultList[i] = newList[i];
+        }
+        return resultList;
     }
 
     public int durchschnitt(int[] notenListe){
