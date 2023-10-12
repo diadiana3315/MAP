@@ -41,7 +41,13 @@ public class Pb3 {
                carry = digits / 10;
 
           }
-          return newArr;
+          int[] resultArr = new int[newArr.length - 1];
+          if(newArr[0] == 0){
+               for(int i = 0; i < newArr.length - 1; i ++){
+                    resultArr[i] = newArr[i+1];
+               }
+          }
+          return resultArr;
      }
 
      public int[] division(int[] arr, int nr){
