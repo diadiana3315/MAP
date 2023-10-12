@@ -1,7 +1,5 @@
 
 public class Main {
-
-
     public static void main(String[] args) {
         int[] notenListe = {54, 31, 63, 73, 98, 92, 70, 65, 23, 34};
         int[] noten = {5, 6, 10};
@@ -9,35 +7,40 @@ public class Main {
         Pb1 note = new Pb1();
         int[] resultArray = note.nichtAusreichend(notenListe);
 
+        System.out.print("Nicht ausreichende Noten: ");
         for (int j : resultArray) {
             if (j != 0)
-                System.out.println(j);
+                System.out.print(j + " ");
         }
-
-        System.out.println(note.durchschnitt(noten));
+        System.out.println();
+        System.out.print("Durchschnittswert der Noten: ");
+        System.out.print(note.durchschnitt(noten));
 
 
 
         int[] roundedGrades = note.abgerundet(notenListe);
 
-        System.out.print("Rounded Grades: ");
+        System.out.println();
+        System.out.print("Abgerundete Noten: ");
         for (int roundedGrade : roundedGrades) {
             System.out.print(roundedGrade + " ");
         }
 
         int maxAbgerundeteNote = note.maxAbgerundet(notenListe);
+        System.out.println();
 
-        if (maxAbgerundeteNote >= 38) {
-            System.out.println("Maximale abgerundete Note: " + maxAbgerundeteNote);
-        } else {
-            System.out.println("Keine ausreichende Note gefunden.");
-        }
+        System.out.println("Maximale abgerundete Note: " + maxAbgerundeteNote);
+
 
         int[] arr = {4, 8, 3, 10, 17};
         Pb2 number = new Pb2();
+        System.out.print("Maximale Zahl: ");
         System.out.println(number.maxZahl(arr));
+        System.out.print("Minimale Zahl: ");
         System.out.println(number.minZahl(arr));
+        System.out.print("Maximale Summe von n-1 Zahlen: ");
         System.out.println(number.maxSumme(arr));
+        System.out.print("Minimale Summe von n-1 Zahlen: ");
         System.out.println(number.minSumme(arr));
 
         int[] arr1 = {5, 4, 0, 0, 0};

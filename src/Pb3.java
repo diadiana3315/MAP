@@ -43,18 +43,13 @@ public class Pb3 {
           }
           int[] resultArr = new int[newArr.length - 1];
           if(newArr[0] == 0){
-               for(int i = 0; i < newArr.length - 1; i ++){
-                    resultArr[i] = newArr[i+1];
-               }
+              System.arraycopy(newArr, 1, resultArr, 0, newArr.length - 1);
           }
           return resultArr;
      }
 
      public int[] division(int[] arr, int nr){
-          int[] newArr = new int[arr.length + 1];
-          int borrow = 0;
 
-          // Ganzzahlige Division des Arrays durch den Divisor
           for (int i = 0; i < arr.length; i++) {
                int quotient = arr[i] / nr;
                int remainder = arr[i] % nr;

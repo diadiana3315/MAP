@@ -11,9 +11,7 @@ public class Pb1 {
         }
         int[] resultList = new int[j];
 
-        for (int i = 0; i < j; i++) {
-            resultList[i] = newList[i];
-        }
+        System.arraycopy(newList, 0, resultList, 0, j);
         return resultList;
     }
 
