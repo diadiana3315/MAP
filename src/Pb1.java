@@ -11,6 +11,7 @@ public class Pb1 {
         }
         int[] resultList = new int[j];
 
+
         System.arraycopy(newList, 0, resultList, 0, j);
         return resultList;
     }
