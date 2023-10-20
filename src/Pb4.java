@@ -1,5 +1,9 @@
 public class Pb4 {
     public int billigste(int[] arr){
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
+
         int minPrice = Integer.MAX_VALUE;
         for (int j : arr) {
             if (j < minPrice) {
@@ -10,6 +14,9 @@ public class Pb4 {
     }
 
     public int teursteGegenstand(int[] arr1, int[] arr2){
+        if (arr1.length == 0 && arr2.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
         int maxPrice1 = Integer.MIN_VALUE;
         int maxPrice2 = Integer.MIN_VALUE;
         for (int k : arr1) {
@@ -31,6 +38,10 @@ public class Pb4 {
     }
 
     public int teuersteUSB(int[] arr, int budget){
+        if (arr.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
+
         int maxPrice = Integer.MIN_VALUE;
         for (int j : arr) {
             if (j > maxPrice && j < budget) {
@@ -41,6 +52,9 @@ public class Pb4 {
     }
 
     public int geldbetrag(int[] arr1, int[] arr2, int budget){
+        if (arr1.length == 0 && arr2.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
         int maxPrice = Integer.MIN_VALUE;
         for (int k : arr1) {
             for (int i : arr2) {

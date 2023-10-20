@@ -1,5 +1,8 @@
 public class Pb3 {
      public int[] summe(int[] arr1, int[] arr2){
+          if (arr1.length == 0 && arr2.length == 0) {
+               throw new IllegalArgumentException("Input array cannot be empty");
+          }
 
           int[] sum = new int[arr1.length + 1];
           int carry = 0;
@@ -15,6 +18,10 @@ public class Pb3 {
      }
 
      public int[] differenz(int[] arr1, int[] arr2){
+          if (arr1.length == 0 && arr2.length == 0) {
+               throw new IllegalArgumentException("Input array cannot be empty");
+          }
+
           int[] diff = new int[arr1.length];
           int borrow = 0;
 
@@ -33,6 +40,10 @@ public class Pb3 {
      }
 
      public int[] multiplikation(int[] arr, int nr){
+          if (arr.length == 0) {
+               throw new IllegalArgumentException("Input array cannot be empty");
+          }
+
           int[] newArr = new int[arr.length + 1];
           int carry = 0;
           for(int i = arr.length - 1; i >= 0; i--){
@@ -49,6 +60,12 @@ public class Pb3 {
      }
 
      public int[] division(int[] arr, int nr){
+          if (arr.length == 0) {
+               throw new IllegalArgumentException("Input array cannot be empty");
+          }
+          if(nr == 0){
+               throw new IllegalArgumentException("Divisor can not be null");
+          }
 
           for (int i = 0; i < arr.length; i++) {
                int quotient = arr[i] / nr;

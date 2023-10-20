@@ -1,7 +1,12 @@
 public class Pb1 {
     public int[] nichtAusreichend(int[] notenListe){
+        if (notenListe.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
+
         int[] newList = new int[notenListe.length];
         int j = 0;
+
 
         for (int k : notenListe) {
             if (k < 40) {
@@ -17,6 +22,10 @@ public class Pb1 {
     }
 
     public int durchschnitt(int[] notenListe){
+        if (notenListe.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
+
         int sum = 0;
         for (int j : notenListe) {
             sum = sum + j;
@@ -25,6 +34,10 @@ public class Pb1 {
     }
 
     public int[] abgerundet(int[] notenListe) {
+        if (notenListe.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
+
         for (int i = 0; i < notenListe.length; i++) {
             if (notenListe[i] >= 38) {
                 int remainder = notenListe[i] % 5;
@@ -40,6 +53,10 @@ public class Pb1 {
 
 
     public int maxAbgerundet(int[] notenListe) {
+        if (notenListe.length == 0) {
+            throw new IllegalArgumentException("Input array cannot be empty");
+        }
+
         int maxAbgerundeteNote = Integer.MIN_VALUE;
         for (int j : notenListe) {
             if (j >= 38) {
